@@ -1,0 +1,348 @@
+/* for floating text in home page */
+ .floating-text {
+  display: inline-block; /* So it animates nicely */
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* about section p */
+.about-text-box {
+  background-color: #f8f9fa; /* Light background */
+  padding: 20px 25px;
+  border-left: 5px solid #f9a825; /* Accent line */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.about-text-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.about-text-box p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Ensure the row content is vertically aligned */
+#about .row {
+  display: flex;
+  align-items: center;
+}
+
+/* Optionally, make image responsive with a bit of spacing */
+.about-img img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Already provided, but in case you missed it */
+.about-text-box {
+  background-color: #f8f9fa;
+  padding: 20px 25px;
+  border-left: 5px solid #f9a825;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.about-text-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+/* service section, classy style for the paragraph description */
+#services .description {
+  background-color: #fdfcfb;
+  border-left: 4px solid #007bff;
+  padding: 15px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  font-family: "Georgia", serif;
+  position: relative;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.02);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services .description:hover {
+  background-color: #f0f9ff;
+  box-shadow: inset 0 0 15px rgba(0, 123, 255, 0.15);
+}
+
+#services .description::before {
+  content: "";
+  /* width: 8px; */
+  /* height: 8px; */
+  background-color: #007bff;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+
+
+#services .description br {
+  display: block;
+  margin-bottom: 6px;
+}
+
+
+/* why choose section */
+
+.why-choose-card {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    border-radius: 10px; 
+    /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); */
+    /* padding: 35px 40px;  */
+    max-width: 600px;
+    /* margin: 40px auto;  */
+    text-align: left; 
+}
+
+.why-choose-card h4 {
+    font-size: 1.7rem;
+    color: #2c3e50; /* Darker heading color */
+    margin-bottom: 25px;
+    font-weight: 700; /* Bold heading */
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.why-choose-card h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px; /* Blue underline */
+    height: 4px;
+    background-color: #3498db; /* A vibrant blue */
+    border-radius: 2px;
+}
+
+.why-choose-card .description-list p { /* Target individual points within the new div */
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 15px; /* Space between points */
+    line-height: 1.6;
+    position: relative;
+    padding-left: 28px; /* Space for custom bullet */
+}
+
+.why-choose-card .description-list p:last-child {
+    margin-bottom: 0; /* No margin after the last point */
+}
+
+.why-choose-card .description-list p::before {
+    content: '\2713'; /* Checkmark unicode */
+    color: #27ae60; /* Green checkmark */
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0; /* Align with text top */
+    font-size: 1.2rem;
+    line-height: 1.6; /* Match line height for vertical alignment */
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .why-choose-card {
+        padding: 25px 20px;
+        margin: 20px auto;
+    }
+
+    .why-choose-card h4 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .why-choose-card h4::after {
+        width: 50px;
+    }
+
+    .why-choose-card .description-list p {
+        font-size: 1rem;
+        padding-left: 25px;
+    }
+}
+
+/* Adjust text colors to be visible on various backgrounds */
+    .text-dark-custom {
+        color: #333333 !important; /* Darker text for better contrast */
+        text-shadow: none; /* Remove text shadow for cleaner look */
+        letter-spacing: 0.5px;
+        font-size: 1.8rem; /* Smaller heading */
+        margin-bottom: 2rem !important; /* Less margin */
+    }
+    .text-accent { color: #8D6E63 !important; /* A more subtle, earthy accent */ }
+    .text-light-muted { color: #555555 !important; /* Darker muted text */ }
+
+    /* --- Stepper Specific Styles --- */
+    .process-stepper-container {
+        max-width: 600px; /* Make it significantly smaller */
+        margin: 0 auto;
+        position: relative;
+        padding-left: 30px; /* Reduce padding for icons and lines */
+        padding-top: 10px; /* Small top padding */
+        padding-bottom: 10px; /* Small bottom padding */
+    }
+
+    .process-step {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px; /* Reduce space between steps */
+        position: relative;
+    }
+
+    /* Vertical line connecting steps */
+    .process-stepper-container::before {
+        content: '';
+        position: absolute;
+        left: 15px; /* Aligned with the center of the icons */
+        top: 0;
+        bottom: 0;
+        width: 1px; /* Thinner line */
+        background-color: #cccccc; /* Lighter line color */
+        z-index: 0;
+    }
+
+    /* Override line for the last step */
+    .process-step.last-step .step-icon-wrapper .step-line {
+        display: none;
+    }
+
+    .step-icon-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .step-icon {
+        width: 35px; /* Smaller icon */
+        height: 35px; /* Smaller icon */
+        border-radius: 50%;
+        background: #8D6E63; /* Solid accent color for icon */
+        color: white; /* White text on accent */
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem; /* Smaller font size for number */
+        flex-shrink: 0;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Subtler shadow */
+        transition: transform 0.15s ease, box-shadow 0.15s ease; /* Faster transition */
+        border: 2px solid white; /* Small white border for contrast */
+    }
+
+    .step-icon:hover {
+        transform: scale(1.03); /* Smaller hover effect */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .step-line {
+        width: 1px; /* Thinner line */
+        height: 100%;
+        background-color: #cccccc; /* Lighter line color */
+        flex-grow: 1;
+        margin-top: 3px; /* Smaller gap from icon */
+        margin-bottom: -20px; /* Adjusted margin */
+    }
+
+    .step-content {
+        flex-grow: 1;
+        margin-left: 15px; /* Smaller space between icon/line and card */
+        width: calc(100% - 50px); /* Adjust width considering icon & margin */
+        padding: 0;
+        background: none; /* No background for card */
+        border: none; /* No border for card */
+        box-shadow: none; /* No shadow for card */
+    }
+
+    /* Card Styling (removed previous sleek-process-card styles for transparency) */
+    .sleek-process-card-step {
+        background-color: transparent; /* Make card background transparent */
+        border: none; /* Remove card border */
+        border-radius: 0; /* No rounded corners if no background */
+        box-shadow: none; /* Remove card shadow */
+        transition: none; /* No transition for a simpler look */
+        overflow: visible; /* Ensure content is not clipped */
+    }
+
+    .sleek-process-card-step:hover {
+        transform: none; /* No lift on hover */
+        box-shadow: none; /* No shadow change on hover */
+        border-color: transparent; /* No border highlight */
+    }
+
+    .sleek-process-card-step .card-body {
+        padding: 0; /* Remove padding from card body */
+    }
+
+    .sleek-process-card-step .card-title {
+        font-size: 1.1rem; /* Smaller title */
+        margin-bottom: 0.25rem; /* Reduced margin */
+        font-weight: 600; /* Slightly bolder for readability */
+        letter-spacing: 0; /* Normal letter spacing */
+    }
+
+    .sleek-process-card-step .card-text {
+        font-size: 0.85rem; /* Smaller text */
+        line-height: 1.4; /* Adjusted line height */
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+
+    /* Responsive adjustments for even smaller screens */
+    @media (max-width: 576px) { /* Targeting smaller mobile devices */
+        .process-stepper-container {
+            padding-left: 20px;
+            max-width: 100%; /* Full width on tiny screens */
+        }
+        .process-stepper-container::before {
+            left: 10px;
+        }
+        .step-icon {
+            width: 30px;
+            height: 30px;
+            font-size: 0.9rem;
+        }
+        .step-content {
+            margin-left: 10px;
+        }
+        .sleek-process-card-step .card-title {
+            font-size: 1rem;
+        }
+        .sleek-process-card-step .card-text {
+            font-size: 0.8rem;
+        }
+    }
